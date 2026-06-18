@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Riri ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="surat.css"/>
+
+
+
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="Birthday-instrument.mp3" type="audio/mpeg">
+</audio>
+
+<div class="envelope-page" id="envelopePage">
+
+<h2>Untuk Pacarku ❤️</h2>
+
+<p>Silahkan dibuka amplopnyaa 🌷</p>
+
+<div class="envelope" onclick="openLetter()">
+✉️
+</div>
+
+</div>
+
+<div class="card" id="card">
+
+<h1>Untuk Riri ❤️</h1>
+
+<p id="typing"></p>
+
+<button class="giftBtn" id="giftBtn" onclick="showFinal()">
+🎁 Hadiah Terakhir
+</button>
+
+</div>
+
+<div class="final" id="final">
+
+<h2>Happy Birthday Riri ❤️</h2>
+
+<p>
+Aku Sayanggg Kamuuu 🩷🩷🩷
+<br><br>
+— Pacarmu yang GANTENGGG🥰🩷
+</p>
+
+</div>
+
+<script>
+
+const text = `
+
+Happy Birthday sayaanggkuuu, cieee nyusull akuu kann jadii 22 umurnyaa hahaha.
+
+Hari inii harii spesial bagi kamuu dan akuu, bagi akuu karnaa seseorang yang berarti dihidup akuu sedang merayakan hari kelahirannya.
+
+Terimaksihh karena sudah ada didunia ini dan hadir untuk akuu memberi senyuman hangat disela sela kehidupan yang bercabang arahnya hehe.
+
+Terimakasih jugaa untuk kamu karna sudah mampu melangkah sejauh ini walaupun berat disetiap langkahnyaa, i’m so proud of youu✨🩷.
+
+Di tahun ini semoga ini tahunn yang terbaik untuk kamu dan tahun tahun berikutnyaa, semoga segala doa dan keinginan kamu ditahun sebelumnya bisa terkabul ditahun ini dan tahun seterusnyaa, Aamiin.
+
+Engga kerasa yaa ini udaa tahun yang ke 3 aku ngerayain ulang tahun kamu dan dalam waktu beberapa bulan hubungan kita sudah jalam 4 tahunn , enggaa kerasaa yaahh hahaha.
+
+Tetap jadi riri yang akuu kenal yaahh, riri yangg lucuu ririi yangg centill, yangg bawell, yanggg betee kaloo akuu ngeselinnn, yang selaluu ceritaa kaloo kamuu lagi kangen sama ayahh, jangan pernah berubah yaa.
+
+Sehatt selaluu yaa sayaanggkuu, akuu sayanggg kamuuu🩷🩷🩷
+
+— Tsabit ❤️
+
+`;
+
+function openLetter(){
+
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 1;
+
+    music.play().catch(err=>{
+        console.log(err);
+    });
+
+    document.getElementById("envelopePage").style.display="none";
+    document.getElementById("card").style.display="block";
+
+    let i = 0;
+
+    function type(){
+
+        if(i < text.length){
+
+            document.getElementById("typing").innerHTML += text.charAt(i);
+
+            i++;
+
+            setTimeout(type,30);
+
+        }else{
+
+            document.getElementById("giftBtn").style.display="block";
+
+        }
+
+    }
+
+    type();
+}
+
+function openLetter(){
+
+document.getElementById("envelopePage").style.display="none";
+document.getElementById("card").style.display="block";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,30);
+
+}else{
+
+document.getElementById("giftBtn").style.display="block";
+
+}
+
+}
+
+type();
+
+}
+
+function showFinal(){
+
+document.getElementById("final").style.display="flex";
+
+setInterval(createHeart,200);
+
+}
+
+function createHeart(){
+
+const el=document.createElement("div");
+
+const items=["❤️","🌸","💖","🌷"];
+
+el.innerHTML=items[Math.floor(Math.random()*items.length)];
+
+el.classList.add("fall");
+
+el.style.left=Math.random()*100+"vw";
+
+el.style.fontSize=(20+Math.random()*30)+"px";
+
+el.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(el);
+
+setTimeout(()=>{
+el.remove();
+},8000);
+
+}
+
+</script>
+
+</body>
+</html>

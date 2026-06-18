@@ -1,0 +1,103 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #fff5f8, #ffffff);
+            overflow-x: hidden;
+            text-align: center;
+            color: #ff4f8b;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            max-width: 650px;
+            line-height: 1.8;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: #ff6ea9;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        }
+
+        .jar {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, .15);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            min-height: 80px;
+        }
+
+        .flower {
+            position: fixed;
+            top: -20px;
+            animation: fall linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        footer {
+            padding: 50px;
+            font-size: 1.2rem;
+        }
