@@ -79,43 +79,15 @@ Sehatt selaluu yaa sayaanggkuu, akuu sayanggg kamuuu🩷🩷🩷
 
 `;
 
-function openLetter(){
 
-    const music = document.getElementById("bgMusic");
-
-    music.volume = 1;
-
-    music.play().catch(err=>{
-        console.log(err);
-    });
-
-    document.getElementById("envelopePage").style.display="none";
-    document.getElementById("card").style.display="block";
-
-    let i = 0;
-
-    function type(){
-
-        if(i < text.length){
-
-            document.getElementById("typing").innerHTML += text.charAt(i);
-
-            i++;
-
-            setTimeout(type,30);
-
-        }else{
-
-            document.getElementById("giftBtn").style.display="block";
-
-        }
-
-    }
-
-    type();
-}
 
 function openLetter(){
+
+const music = document.getElementById("bgMusic");
+
+music.play().catch(err=>{
+    console.log(err);
+});
 
 document.getElementById("envelopePage").style.display="none";
 document.getElementById("card").style.display="block";
